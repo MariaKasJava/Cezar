@@ -31,16 +31,17 @@ public class Cezar111 {
             key = scanner.nextInt();
 
             while ((line = reader.readLine()) != null) {
-                stringBuilder.append(line);
-                stringBuilder = Contracenia.contrasenia(line, key);
+
+                stringBuilder.append(Contracenia.contrasenia(line, key));
+
 
            }
         } else if (otvet.equalsIgnoreCase("decrypt")) {
             System.out.println("Enter the decryption key");
             int decod = scanner.nextInt();
             while ((line = reader.readLine()) != null) {
-                stringBuilder.append(line);
-                stringBuilder = Decoder.decoder(line, decod);
+
+                stringBuilder.append(Decoder.decoder(line, decod));
 
             }
 
