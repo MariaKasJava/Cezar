@@ -18,16 +18,16 @@ public class Cezar111 {
 
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введте имя файла");
+        System.out.println("Enter file name");
         String fileName = scanner.nextLine();
 
         BufferedReader reader = new BufferedReader(new FileReader(new File(fileName)));
         StringBuilder stringBuilder = new StringBuilder();
 
-        System.out.println("шифровать , разшифровать или brute force");
+        System.out.println("encrypt, decrypt or brute force");
         String otvet = scanner.nextLine();
-        if (otvet.equalsIgnoreCase("шифровать")) {
-            System.out.println("Введте ключ щифра");
+        if (otvet.equalsIgnoreCase("encrypt")) {
+            System.out.println("Enter the encryption key");
             key = scanner.nextInt();
 
             while ((line = reader.readLine()) != null) {
@@ -35,8 +35,8 @@ public class Cezar111 {
                 stringBuilder = Contracenia.contrasenia(line, key);
 
            }
-        } else if (otvet.equalsIgnoreCase("разшифровать")) {
-            System.out.println("Введте ключ дещифровки");
+        } else if (otvet.equalsIgnoreCase("decrypt")) {
+            System.out.println("Enter the decryption key");
             int decod = scanner.nextInt();
             while ((line = reader.readLine()) != null) {
                 stringBuilder.append(line);
