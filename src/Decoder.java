@@ -1,5 +1,7 @@
 public class Decoder {
-    public static StringBuilder decoder (String a, int count ) {
+
+
+   public static  StringBuilder decoder (String a, int count) {
         StringBuilder result1 = new StringBuilder();
         for (char char1:a.toCharArray()) {
 
@@ -11,6 +13,8 @@ public class Decoder {
             } else {
                 result1.append(char1);
             }
-        }return result1;}
+        }
+        return result1;
+    }
 
 }

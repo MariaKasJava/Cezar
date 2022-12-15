@@ -1,9 +1,11 @@
 import javax.swing.*;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Cezar111 {
-    public static final String alfavit = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ,-.? :!";
+    public static  String alfavit = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ,-.? :!";
 
 
 
@@ -27,11 +29,12 @@ public class Cezar111 {
         if (otvet.equalsIgnoreCase("шифровать")) {
             System.out.println("Введте ключ щифра");
             key = scanner.nextInt();
+
             while ((line = reader.readLine()) != null) {
                 stringBuilder.append(line);
                 stringBuilder = Contracenia.contrasenia(line, key);
 
-            }
+           }
         } else if (otvet.equalsIgnoreCase("разшифровать")) {
             System.out.println("Введте ключ дещифровки");
             int decod = scanner.nextInt();
@@ -44,21 +47,25 @@ public class Cezar111 {
         } else if (otvet.equalsIgnoreCase("brute force")) {
 
             while ((line = reader.readLine()) != null) {
-                stringBuilder.append(line);
 
-                BruteForce.decoder2();
+                stringBuilder.append(BruteForce.decoder2());
 
             }
-           reader.close();
+   }
 
 
+        try {
+            BufferedWriter writer =new BufferedWriter(new FileWriter(new File("text2")));
+
+            writer.write(stringBuilder.toString());
+            reader.close();
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
-        BufferedWriter writer = new BufferedWriter(new FileWriter(new File("text2")));
-        writer.write(stringBuilder.toString());
-        writer.close();
-
-}
 
 }
 
