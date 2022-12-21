@@ -11,15 +11,15 @@ public class BruteForce {
 
             for (int j = 0; j <chars.length;j++){
 
-            if (Cezar111.alfavit.indexOf(chars[j])!=-1) {
+                if (Cezar111.alfavit.indexOf(chars[j])!=-1) {
 
-                char newPosition = Cezar111.alfavit.charAt((Cezar111.alfavit.indexOf(chars[j])-i + Cezar111.alfavit.length())% Cezar111.alfavit.length());
+                    char newPosition = Cezar111.alfavit.charAt((Cezar111.alfavit.indexOf(chars[j])-i + Cezar111.alfavit.length())% Cezar111.alfavit.length());
 
-                result1.append(newPosition);
-            } else {
-                result1.append(chars[j]);
+                    result1.append(newPosition);
+                } else {
+                    result1.append(chars[j]);
+                }
             }
-        }
             list.add(result1.toString() ) ;
 
         }
@@ -28,19 +28,19 @@ public class BruteForce {
 
     private static List<String> list = new ArrayList<> ();
 
-        public static String decoder2(){
-           decoder1();
+    public static String decoder2(){
+        decoder1();
 
-            for (String text : list){
-              for (String word :words){
-                  if (text.contains(word)){
+        for (String text : list){
+            for (String word :words){
+                if (text.contains(word)){
 
-                   return text;
+                    return text;
 
-  }
+                }
+            }
+        } return null;
+
+
     }
-     } return null;
-
-
-        }
 }
