@@ -54,7 +54,7 @@ public class Cezar111 {
             }
         }else if (otvet.equalsIgnoreCase("statistik")){
             while ((line = reader.readLine()) != null) {
-               Statistik.decoder4();
+              stringBuilder.append(Statistik.key());
         }}
 
 
