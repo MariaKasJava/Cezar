@@ -1,13 +1,14 @@
 public class Decoder {
 
 
-   public static  StringBuilder decoder (String a, int count) {
+
+    public static StringBuilder decoder(String a, int count) {
         StringBuilder result1 = new StringBuilder();
-        for (char char1:a.toCharArray()) {
+        for (char char1 : a.toCharArray()) {
 
-            if (Cezar111.alfavit.indexOf(char1)!= -1) {
+            if (Cezar111.alfavit.indexOf(char1) != -1) {
 
-                char newPosition = Cezar111.alfavit.charAt((Cezar111.alfavit.indexOf(char1)-count + Cezar111.alfavit.length())% Cezar111.alfavit.length());
+                char newPosition = Cezar111.alfavit.charAt((Cezar111.alfavit.indexOf(char1) - count + Cezar111.alfavit.length()) % Cezar111.alfavit.length());
 
                 result1.append(newPosition);
             } else {
