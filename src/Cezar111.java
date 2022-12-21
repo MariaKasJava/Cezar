@@ -24,7 +24,7 @@ public class Cezar111 {
         BufferedReader reader = new BufferedReader(new FileReader(new File(fileName)));
         StringBuilder stringBuilder = new StringBuilder();
 
-        System.out.println("encrypt, decrypt or brute force");
+        System.out.println("encrypt, decrypt , brute force or statistik");
         String otvet = scanner.nextLine();
         if (otvet.equalsIgnoreCase("encrypt")) {
             System.out.println("Enter the encryption key");
@@ -35,7 +35,7 @@ public class Cezar111 {
                 stringBuilder.append(Contracenia.contrasenia(line, key));
 
 
-           }
+            }
         } else if (otvet.equalsIgnoreCase("decrypt")) {
             System.out.println("Enter the decryption key");
             int decod = scanner.nextInt();
@@ -52,7 +52,11 @@ public class Cezar111 {
                 stringBuilder.append(BruteForce.decoder2());
 
             }
-   }
+        }else if (otvet.equalsIgnoreCase("statistik")){
+            while ((line = reader.readLine()) != null) {
+               Statistik.decoder4();
+        }}
+
 
 
         try {
@@ -69,9 +73,4 @@ public class Cezar111 {
     }
 
 }
-
-
-
-
-
 
