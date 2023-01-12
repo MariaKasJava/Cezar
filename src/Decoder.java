@@ -1,5 +1,5 @@
+//code looks better if it is corrected via ctrl alt L combination
 public class Decoder {
-
 
 
     public static StringBuilder decoder(String a, int count) {
